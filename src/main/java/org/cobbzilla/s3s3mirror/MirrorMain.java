@@ -58,6 +58,7 @@ public class MirrorMain {
             }
 
             client = getAmazonS3Client();
+            client.setEndpoint("s3-us-gov-west-1.amazonaws.com");
             context = new MirrorContext(options);
             master = new MirrorMaster(client, context);
 
